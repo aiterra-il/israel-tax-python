@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "israel-tax"
+dynamic = ["version"]
+description = "Israeli tax and payroll calculators for 2026: net salary (מס הכנסה, ביטוח לאומי, מס בריאות, פנסיה), gross from net, VAT 18%, purchase tax (מס רכישה), self-employed tax, severance pay, credit points, recuperation pay and minimum wage"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Aiterra", email = "info@aiterra.co.il" }]
+keywords = ["israel", "tax", "payroll", "net-salary", "vat", "מע\"מ", "מס הכנסה", "ביטוח לאומי", "שכר נטו", "מס רכישה", "פיצויים", "נקודות זיכוי", "hebrew"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Natural Language :: Hebrew",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Office/Business :: Financial :: Accounting",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://www.aiterra.co.il/tools/net-salary-calculator"
+Repository = "https://github.com/aiterra-il/israel-tax-python"
+Issues = "https://github.com/aiterra-il/israel-tax-python/issues"
+"npm package" = "https://www.npmjs.com/package/israel-tax"
+Aiterra = "https://www.aiterra.co.il"
+
+[tool.setuptools]
+packages = ["israel_tax"]
+
+[tool.setuptools.dynamic]
+version = { attr = "israel_tax.__version__" }
+
+[tool.setuptools.package-data]
+israel_tax = ["py.typed"]
